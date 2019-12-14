@@ -1,4 +1,4 @@
-Sublime C Improved
+Sublime C Improved - VNR Syntax highlighting fork
 ================
 
 This package provides better support of C/C++/Objective-C languages in Sublime Text.
