@@ -1054,6 +1054,7 @@
           (
             (float24)
           | (bool_t)
+          | ( (s_)? bool             )
           | ( (s_)? boolean          )
           | ( (s|u) int (8|16|32|64) )
           )
