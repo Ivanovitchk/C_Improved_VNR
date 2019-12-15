@@ -1191,7 +1191,7 @@
           <key>match</key> <string>\s*\b(u?int(?:(?:_least|_fast)?((?:8|16|32|64)_t|ptr_t|max_t)))\b</string>
           <key>captures</key>
           <dict>
-            <key>1</key> <dict> <key>name</key> <string>support.type.stdint.c</string> </dict>
+            <key>1</key> <dict> <key>name</key> <string>support.vnr.types</string> </dict>
           </dict>
         </dict>
 
