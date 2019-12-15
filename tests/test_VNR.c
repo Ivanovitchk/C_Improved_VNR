@@ -1,17 +1,69 @@
-au8FS_data[u8PROGR_OK_IDX] TRUE
-vidInit bTest btest; btest bTest beTest psb2222 u16test au8 u8test
-MOD_u8Test MOD_u8test MOD_bTest  MOD_btest MOD_vidInit vidInit pabTa
-GLB_u8Test GLB_au8Test GLB_vidInit
-boolean s_boolean uint8 sint8 uint32
 
-uint8_t uint8  tstrA tudtA
+// basic types
+boolean bTest
+uint8   u8Test;
+uint16  u16Test;
+uint32  u32Test;
+uint64  u64Test;
 
-  kpabTest kabTest cbTest bTest cpau8Test cu16Test
+// C99 stdint types
+bool_t   bTest
+uint8_t  u8Test;
+uint16_t u16Test;
+uint32_t u32Test;
+uint64_t u64Test;
 
-__interrupt Pragma ghs interrupt isr
-{ MOD_vidInit() vidInit() TEST(); TEST; } vidInit ();
-void const MOD_vidGLB_Init (uint8 GLB_abbBB );
+// arrays
+uint8_t au8Test[1337];
+bool_t  abTest[2];
 
-printf();
+// complex-types
+typedef enum
+{
+  enuAAAA,
+  enuBBBB
+} tenuName;
 
-// WTF  /*  FIXME TODO */
+tenuName enuTest;
+
+typedef struct
+{
+  bool_t bA, uint8_t u8B
+} tstrName;
+
+tstrName strTest;
+
+uint8_t* pau8Test = &au8Test;
+c = &pstrTest;
+
+const uint8_t cu8Test, ku8Test;
+const uint32_t cau32Test[2];
+const tstrTest castrTest[3];
+
+typedef (void)(tpfTest*)(void); // highligting needs to be fixed on typedefs
+
+boolean         bVar
+uint8           u8UnsignedByte;
+uint8_t         au8ArrayOfUnsignedBytes[1337];
+bool_t          abArrayOfBools[2];
+uint8_t*        pau8PointerToArrayOfUnsignedBytes = &au8Test;
+
+tstrType        strStuct;
+tstrType*       pstrPtrToStruct = &strStuct;
+
+const uint8_t   cu8ConstByte, ku8ConstByte; // alternate c / k notation
+const uint32_t  cau32ConstU32Array[2];
+const tstrTest  castrConstStructArray[3];
+const uint32_t* pcau32PointerToConstU32Array = &cau32ConstU32Array
+const uint8_t*  const cpcu8ConstPtrToConstUnsignedByte;
+
+tpfFuncPtrType pfFuncPtr
+const tpfFuncPtrType cpfFuncPtr
+tpfFuncPtrType apfFuncPtrArray[2]
+tpfFuncPtrType* const cpapfConstPtrToArrayOfFuncPtrs = &apfFuncPtrArray
+
+
+// TODO
+// FIXME
+// BUG
+// WTF
