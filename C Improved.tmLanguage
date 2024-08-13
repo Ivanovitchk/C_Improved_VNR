@@ -1054,6 +1054,8 @@
           (
             (float24)
           | (bool_t)
+          | (size_t)
+          | (time_t)
           | ( (s_)? bool             )
           | ( (s_)? boolean          )
           | ( (s|u) int (8|16|32|64) )
@@ -1075,10 +1077,8 @@
             | (?: \s*\b)
             )
             (a)?
-            (k|c)?
             (p)?
             (a)?
-            (k|c)?
             (a)?
             (p)?
             (
@@ -1092,13 +1092,11 @@
           <key>captures</key>
           <dict>
             <key>1</key> <dict> <key>name</key> <string>support.vnr.array</string> </dict>
-            <key>2</key> <dict> <key>name</key> <string>support.vnr.const</string> </dict>
-            <key>3</key> <dict> <key>name</key> <string>support.vnr.pointer</string> </dict>
+            <key>2</key> <dict> <key>name</key> <string>support.vnr.pointer</string> </dict>
+            <key>3</key> <dict> <key>name</key> <string>support.vnr.array</string> </dict>
             <key>4</key> <dict> <key>name</key> <string>support.vnr.array</string> </dict>
-            <key>5</key> <dict> <key>name</key> <string>support.vnr.const</string> </dict>
-            <key>6</key> <dict> <key>name</key> <string>support.vnr.array</string> </dict>
-            <key>7</key> <dict> <key>name</key> <string>support.vnr.pointer</string> </dict>
-            <key>8</key> <dict> <key>name</key> <string>support.vnr.integers</string> </dict>
+            <key>5</key> <dict> <key>name</key> <string>support.vnr.pointer</string> </dict>
+            <key>6</key> <dict> <key>name</key> <string>support.vnr.integers</string> </dict>
           </dict>
         </dict>
 
@@ -1110,9 +1108,7 @@
               (?: _ )
             | (?: \s*\b)
             )
-            (k|c)?
             (p)?
-            (k|c)?
             (a)?
             (p)?
             (f)
@@ -1120,12 +1116,10 @@
           </string>
           <key>captures</key>
           <dict>
-            <key>1</key> <dict> <key>name</key> <string>support.vnr.const</string> </dict>
-            <key>2</key> <dict> <key>name</key> <string>support.vnr.pointer</string> </dict>
-            <key>3</key> <dict> <key>name</key> <string>support.vnr.const</string> </dict>
-            <key>4</key> <dict> <key>name</key> <string>support.vnr.array</string> </dict>
-            <key>5</key> <dict> <key>name</key> <string>support.vnr.pointer</string> </dict>
-            <key>6</key> <dict> <key>name</key> <string>support.function</string> </dict>
+            <key>1</key> <dict> <key>name</key> <string>support.vnr.pointer</string> </dict>
+            <key>2</key> <dict> <key>name</key> <string>support.vnr.array</string> </dict>
+            <key>3</key> <dict> <key>name</key> <string>support.vnr.pointer</string> </dict>
+            <key>4</key> <dict> <key>name</key> <string>support.function</string> </dict>
           </dict>
         </dict>
 
@@ -1138,14 +1132,12 @@
               (?: _ )
             | (?: \s*\b)
             )
-            (k|c)?
             (p)
             (?:\p{Lu})
           </string>
           <key>captures</key>
           <dict>
-            <key>1</key> <dict> <key>name</key> <string>support.vnr.const</string> </dict>
-            <key>2</key> <dict> <key>name</key> <string>support.vnr.pointer</string> </dict>
+            <key>1</key> <dict> <key>name</key> <string>support.vnr.pointer</string> </dict>
           </dict>
         </dict>
 
