@@ -1050,21 +1050,18 @@
         <dict>  <!-- s_/boolean  u/s int8/16/32/64 types declaration -->
           <key>match</key>
           <string>(?x)
-          \s*\b
-          (
-            (float24)
-          | (bool_t)
-          | (size_t)
-          | (time_t)
-          | ( (s_)? bool             )
-          | ( (s_)? boolean          )
-          | ( (s|u) int (8|16|32|64) )
-          )
-          \b
+            \s*\b
+            (
+              (\w+_t)
+            | ( (s_)? bool             )
+            | ( (s_)? boolean          )
+            | ( (s|u) int (8|16|32|64) )
+            )
+            \b
           </string>
           <key>captures</key>
           <dict>
-            <key>1</key> <dict> <key>name</key> <string>support.vnr.types</string> </dict>
+            <key>1</key> <dict> <key>name</key> <string>storage.type.c</string> </dict>
           </dict>
         </dict>
 
@@ -1082,10 +1079,13 @@
             (a)?
             (p)?
             (
-              (s?b)
-            | (f ([1-9][1-9]) )
-            | ( (s|u)( [1-9] | [1-9][0-9] | 1[0-2][0-9] ) )
-            | (enu|str(?!ing)|udt|uni)
+              (
+                (s?b)
+              | (f ([1-9][1-9]) )
+              | ( (s|u)( [1-9] | [1-9][0-9] | 1[0-2][0-9] ) )
+              | (s|enu|str(?!ing)|udt|uni)
+              )
+              (?=[A-Z])
             )
             (?:\p{L})
           </string>
@@ -1153,7 +1153,7 @@
             (enu|str(?!ing)|udt|uni)?
             (p)?
             (f)?
-            (?:\p{L})
+            (?=[A-Z])(?:\p{L})
           </string>
           <key>captures</key>
           <dict>
